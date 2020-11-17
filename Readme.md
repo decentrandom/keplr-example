@@ -1,1 +1,1 @@
-See comments on `src/main.js`.
+Keplr, DecentRandom wallet
