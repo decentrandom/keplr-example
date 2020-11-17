@@ -22,9 +22,9 @@ window.onload = async () => {
                     // The name of the chain to be displayed to the user.
                     chainName: "DecentRandom",
                     // RPC endpoint of the chain.
-                    rpc: "http://178.128.52.242:1317",
+                    rpc: "http://178.128.52.242:26657",
                     // REST endpoint of the chain.
-                    rest: "http://178.128.52.242:26657",
+                    rest: "http://178.128.52.242:1317",
                     // Staking coin information
                     stakeCurrency: {
                         // Coin denomination to be displayed to the user.
@@ -130,7 +130,7 @@ window.onload = async () => {
 
     // Initialize the gaia api with the offline signer that is injected by Keplr extension.
     const cosmJS = new SigningCosmosClient(
-        "http://http://178.128.52.242:26657",
+        "http://http://178.128.52.242:1317",
         accounts[0].address,
         offlineSigner,
     );
@@ -161,7 +161,7 @@ document.sendForm.onsubmit = () => {
 
         // Initialize the gaia api with the offline signer that is injected by Keplr extension.
         const cosmJS = new SigningCosmosClient(
-            "http://http://178.128.52.242:26657",
+            "http://http://178.128.52.242:1317",
             accounts[0].address,
             offlineSigner
         );
