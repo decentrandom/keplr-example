@@ -130,7 +130,7 @@ window.onload = async () => {
 
     // Initialize the gaia api with the offline signer that is injected by Keplr extension.
     const cosmJS = new SigningCosmosClient(
-        "http://http://178.128.52.242:1317",
+        "http://178.128.52.242:1317",
         accounts[0].address,
         offlineSigner,
     );
@@ -161,7 +161,7 @@ document.sendForm.onsubmit = () => {
 
         // Initialize the gaia api with the offline signer that is injected by Keplr extension.
         const cosmJS = new SigningCosmosClient(
-            "http://http://178.128.52.242:1317",
+            "http://178.128.52.242:1317",
             accounts[0].address,
             offlineSigner
         );
