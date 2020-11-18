@@ -6,7 +6,7 @@ window.onload = async () => {
     // And it also injects the helper function to `window.keplr`.
     // If `window.getOfflineSigner` or `window.keplr` is null, Keplr extension may be not installed on browser.
     if (!window.getOfflineSigner || !window.keplr) {
-        alert("Please install keplr extension");
+        alert("케플러 브라우저 익스텐션을 설치하셔야 합니다.");
     } else {
         if (window.keplr.experimentalSuggestChain) {
             try {
@@ -144,7 +144,7 @@ document.sendForm.onsubmit = () => {
 
     amount = parseFloat(amount);
     if (isNaN(amount)) {
-        alert("Invalid amount");
+        alert("수량은 숫자와 점(.)으로만 입력할 수 있습니다.");
         return false;
     }
 
@@ -175,9 +175,9 @@ document.sendForm.onsubmit = () => {
 
         if (result.code !== undefined &&
             result.code !== 0) {
-            alert("Failed to send tx: " + result.log || result.rawLog);
+            alert("전송에 실패했습니다 : " + result.log || result.rawLog);
         } else {
-            alert("Succeed to send tx");
+            alert("전송이 완료되었습니다.");
         }
     })();
 
