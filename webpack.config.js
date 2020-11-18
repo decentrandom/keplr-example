@@ -13,6 +13,28 @@ module.exports = {
     devServer: {
         port: 8081
     },
+    module: {
+        rules: [
+            {
+                test: /\.(gif|png)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    'html-loader'
+                ]
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "index.html",
