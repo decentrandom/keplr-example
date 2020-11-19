@@ -6,7 +6,8 @@ window.onload = async () => {
     // And it also injects the helper function to `window.keplr`.
     // If `window.getOfflineSigner` or `window.keplr` is null, Keplr extension may be not installed on browser.
     if (!window.getOfflineSigner || !window.keplr) {
-        alert("케플러 브라우저 익스텐션을 설치하셔야 합니다.");
+        //alert("케플러 브라우저 익스텐션을 설치하셔야 합니다.");
+        document.getElementById("need_keplr").style.display = "box";
     } else {
         if (window.keplr.experimentalSuggestChain) {
             try {
@@ -105,10 +106,10 @@ window.onload = async () => {
                     }
                 });
             } catch {
-                alert("Failed to suggest the chain");
+                alert("체인 제안에 실패했습니다. 잠시 후 다시 이용해주세요.");
             }
         } else {
-            alert("Please use the recent version of keplr extension");
+            alert("Keplr 익스텐션 최신 버전을 사용하시기 바랍니다.");
         }
     }
 
